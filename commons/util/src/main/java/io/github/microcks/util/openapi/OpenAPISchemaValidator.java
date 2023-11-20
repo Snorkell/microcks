@@ -309,10 +309,10 @@ public class OpenAPISchemaValidator {
       if (node.has("type") && !node.path("type").asText().equals("object")) {
 
          // Convert date format to date-time.
-         if (node.has("format") && node.path("format").asText().equals("date")
-               && node.path("type").asText().equals("string")) {
-            ((ObjectNode) node).put("format", "date-time");
-         }
+//         if (node.has("format") && node.path("format").asText().equals("date")
+//               && node.path("type").asText().equals("string")) {
+//            ((ObjectNode) node).put("format", "date-time");
+//         }
 
          // Convert nullable in additional type and remove node.
          if (node.path("nullable").asBoolean()) {
